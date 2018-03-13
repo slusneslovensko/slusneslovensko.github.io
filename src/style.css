@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin-ext"); 
+#helpsvk{
+	display:block;
+	position:relative;
+	overflow:hidden;
+	background:black;
+	z-index:999999999999; /*todo: delete me*/
+	font-family:"Roboto Slab", sans-serif;
+	text-align:center; font-size:11pt;
+} 
+.clb{ clear:both; } 
+#helpsvk *{ color:white; text-align:center; } 
+#helpsvk p{ margin:1em 0 0 0;  } 
+#helpsvk p.f{ margin:0;} 
+#helpsvk a{
+	display:inline-block; padding:0.5em 1em; 
+	text-decoration:none; border:3px solid #707070; margin-top:1em;  
+	font-size:0.8em; text-transform: uppercase; 
+	transition: all 0.2s; 
+} 
+#helpsvk a:hover{ background:#707070; color:black; } 
+#helpsvk_arrow{ height:12pt; cursor:pointer; } 
+#helpsvk .opener{ transition:all 0.2s; margin:14pt 0; } 
+#helpsvk.open .opener{ transform:rotate(180deg) }
+#helpsvk .t1{ float:left; }
+#helpsvk .t1 img{ height:16pt; max-height:38px; } 
+#helpsvk .t2{ font-size:10pt; float:right; text-transform:uppercase; } 
+#helpsvk .beforetime{ color:#999999; vertical-align:middle; padding-right:0.5em; } 
+#helpsvk .hct{ 
+	position:relative; cursor:pointer; 
+} 
+#helpsvk .mct{  
+	position:relative; clear:both;
+	overflow:hidden; max-height:0;
+	transition: all 0.2s;
+} 
+#helpsvk.open .mct{ max-height:none; } 
+#helpsvk .insides, #helpsvk .t2{ padding:12pt; } 
+#helpsvk .t1{ padding:11pt; } 
+#helpsvk .insides { margin:auto; max-width:900pt; padding-bottom:2.5em; }  
+
+#helpsvk .time span{ position:relative; font-size:1.5em; line-height:1em; vertical-align:middle } 
+#helpsvk .time span:before{ 
+	position:absolute;top:100%;width:100%;
+	font-size:0.45em; line-height:1em; text-align:center;
+} 
+#helpsvk .yr:before{ content:"R"; } 
+#helpsvk .mn:before{ content:"M"; } 
+#helpsvk .da:before{ content:"D"; } 
+#helpsvk .hr:before{ content:"H"; } 
+@media screen and (max-width:692pt){ 
+	#helpsvk .t1, #helpsvk .t2 { display:block; padding-left:0; padding-right:0; width:100%; }
+	#helpsvk .t1{ padding: 5pt;} 
+	#helpsvk .t2{ padding:0 0 0.5em 0; } 
+	#helpsvk .insides{padding-top:0;}
+	#helpsvk .opener{ margin:8pt 0; } 
+} 
+@media screen and (min-width:692pt){ 
+	#helpsvk_arrow{ float:right; } 
+	#helpsvk p.f{ 
+		padding-top:30pt;
+	  padding-bottom: 0.5em;
+	} 
+	#helpsvk .t1{ 
+		float:none; position: absolute;
+		transition: all 0.2s;
+		top:0; left:0; transform:translateX(0); 
+	} 
+	#helpsvk.open .t1{
+    left:50%; transform:translateX(-50%);
+    top: 35pt; 
+    width:400pt;
+	}
+	#helpsvk.open .t1 img{ height:26pt; }
+} 
+@media screen and (min-width:800pt){ 
+	#helpsvk .t1{ background:10pt; }
+	#helpsvk .t1 img{ height:20pt; }
+	#helpsvk.open .t1 img{ height:24pt; }
+} 
+@media screen and (min-width:1000pt){} 
+@media screen and (min-width:1060pt){ } 
+@media screen and (min-width:1180px){ 
+	#helpsvk_arrow{ float:none; position:absolute; left:50%; margin-left:-11pt; }
+}

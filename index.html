@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Sme za lepšie Slovensko</title>
+  <style>
+  	@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&subset=latin-ext");
+  	*{ margin:0; padding:0; }
+  	.main{
+  		font-family:"Open Sans", Helvetica, sans-serif;
+  		font-size:12pt;
+  		max-width:680px;
+  		margin:auto;
+  		padding:1em;
+  		margin-top:2em;
+		}
+		.main b{
+			white-space: nowrap;
+		}
+		h1, h2{
+			font-size:1.25em;
+			margin-bottom:0.5em;
+		}
+		p{
+			margin-bottom:1em;
+		}
+		.codeblock{
+			display:block; width:100%; box-sizing: border-box;
+			border:0; 
+			font-size:1em; 
+			padding:0.5em; margin:0 0 1em 0; 
+		}
+		.codeblock, .codefont{ font-family: courier; background:#f6f8fa; }  	
+	</style>
+	
+	<script type="text/javascript">
+	function selectText(containerid) {
+		if (document.selection) {
+			var range = document.body.createTextRange();
+			range.moveToElementText(document.getElementById(containerid));
+			range.select();
+		} else if (window.getSelection) {
+			var range = document.createRange();
+			range.selectNode(document.getElementById(containerid));
+			window.getSelection().removeAllRanges();
+			window.getSelection().addRange(range);
+		}
+		//document.execCommand("Copy");
+	}
+	</script>
+</head>
+<body>
+  <script src="slusneslovensko.min.js" data-slusneslovensko-open async type="text/javascript"></script>
+	<div class="main">
+		<h1>Plugin za slušné Slovensko</h1>
+		<p>Lightweight <b>9.5&nbsp;KB</b> plugin, napísaný v natívnom <b>vanilla javascript</b>e bez požiadaviek na jQuery, alebo iné knižnice. Podporované sú <b>IE8+</b> a všetky bežné moderné prehliadače. Pri písaní pluginu sa myslelo na <a style="font-style:italic;" href="https://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a>, pre hladký user experience každého užívateľa používajúceho aj ten najpredpotopnejší prehliadač :)</p>
+		
+		<h2>Použitie</h2>
+		<p>Jednoducho hocikam na stránku vložte tento script</p>
+		<span class="codeblock" id="mainjs" onClick="selectText('mainjs')">&lt;script src="//slusneslovensko.github.io/slusneslovensko.min.js" async type="text/javascript"&gt;&lt;/script&gt;</span>
+		<p>Prosím, script <b>vkladajte vždy z tohto github.io CDN</b>. Jednak tým ušetríte kilobajty svojim užívateľom ktorí vidia banner skrz rôzne portály, a jednak sa v prípade zmeny dôležitých informácií vie updatovať.</p>
+		<p>Plugin sa načíta <b>najrýchlejšie</b>, keď sa vloží <b>hneď za &lt;body&gt; tag</b>. Keď je vložený skôr, čaká na <i>document ready</i> &ndash; čo by mohlo vadiť pri vačších weboch, kde sa celý obsah načíta až po chvíli a banner by ho teda posunul nižšie neskôr. Preto je ho najlepšie vložiť hneď za body.</p>
+		
+		<h2>Možnosti</h2>
+		<p><span class="codefont">data-slusneslovensko-open</span> &ndash; pridaním tohto atribútu do vloženého scriptu sa banner po načítaní zobrazí zavretý.</p>
+	</div>
+</body>
+</html>
