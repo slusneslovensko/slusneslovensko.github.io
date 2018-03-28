@@ -1,4 +1,4 @@
-var t_d=new Date(2018, 1, 25, 0); 
+var t_d=new Date(2018, 1, 21, 0); 
 !function(w, d) {
 	var o='open';
 	var a='addEventListener'; 
@@ -25,7 +25,7 @@ var t_d=new Date(2018, 1, 25, 0);
 		function tck(){
 			var t_n = new Date();
 			var diff = new Date( (t_n.getTime()-t_d.getTime()) ); 
-			var epoch = new Date(1970, 1, 1, 0,0,0);
+			var epoch = new Date(1970, 0, 1, 0,0,0);
 			
 			var years = diff.getYear() - epoch.getYear(); if(years<0) years=0;
 			var month = diff.getMonth() - epoch.getMonth(); if(month<0) month=0;
